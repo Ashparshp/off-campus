@@ -15,7 +15,7 @@ const Hamburger = ({isOpen}) => {
         >
           <div className='text-xl font-semibold uppercase bg-tertiary-100 text-white py-10 m-6 rounded-3xl '>
             <ul className='flex flex-col justify-center items-center gap-10'>
-              <li>Home</li>
+              <li><a href="/style">Home</a></li>
               <li>Book Now</li>
               <li>Digital Products</li>
               <li>Courses</li>
