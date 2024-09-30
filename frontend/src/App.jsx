@@ -20,7 +20,8 @@ function App() {
 
   return (
     <>
-      <main className='overflow-x-hidden' onClick={closeSubMenu}>
+      {/* Restrict overflow to horizontal only */}
+      <main className='' onClick={closeSubMenu}>
         <Navbar isOpen={isOpen} handleSubMenu={handleSubMenu} />
         <Hero />
         <NumberCounter/>

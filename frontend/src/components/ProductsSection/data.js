@@ -29,31 +29,114 @@ export const tabs = [
 export const products = [
 
   {
-    id : 1,
+    id : 101,
     title: '1:1 Call',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, nemo.',
+    description: 'Cold Mailing/CV/lnterviews etc',
+    subfunction : '60 mins',
+    function : 'Video Meeting',
     price: 50,
+    discoutedprice : 40,
     type : '1:1 call',
+    rating : 4.8,
+    sales : 100,
+    tags:[
+      {
+        name : 'Best Seller',
+        color : 'bg-yellow-400'
+      },
+      {
+        name : 'Popular',
+        color : 'bg-green-400'
+      }
+    ]
   },
   {
-    id : 2,
+    id : 101,
     title: '1:1 Call',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, nemo.',
+    description: 'Cold Mailing/CV/lnterviews etc',
+    subfunction : '60 mins',
+    function : 'Video Meeting',
     price: 50,
-    type : 'Digital Products',
+    discoutedprice : 40,
+    type : '1:1 call',
+    rating : 4.8,
+    sales : 100,
+    tags:[
+      {
+        name : 'Best Seller',
+        color : 'bg-yellow-400'
+      },
+      {
+        name : 'Popular',
+        color : 'bg-green-400'
+      }
+    ]
   },
   {
-    id : 3,
+    id : 101,
     title: '1:1 Call',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, nemo.',
+    description: 'Cold Mailing/CV/lnterviews etc',
+    subfunction : '60 mins',
+    function : 'Video Meeting',
     price: 50,
-    type : 'Digital Products',
+    discoutedprice : 40,
+    type : '1:1 call',
+    rating : 4.8,
+    sales : 100,
+    tags:[
+      {
+        name : 'Best Seller',
+        color : 'bg-yellow-400'
+      },
+      {
+        name : 'Popular',
+        color : 'bg-green-400'
+      }
+    ]
   },
   {
-    id : 4,
+    id : 101,
     title: '1:1 Call',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, nemo.',
+    description: 'Cold Mailing/CV/lnterviews etc',
+    subfunction : '60 mins',
+    function : 'Video Meeting',
     price: 50,
+    discoutedprice : 40,
     type : 'Digital Products',
+    rating : 4.8,
+    sales : 100,
+    tags:[
+      {
+        name : 'Best Seller',
+        color : 'bg-yellow-400'
+      },
+      {
+        name : 'Popular',
+        color : 'bg-green-400'
+      }
+    ]
+  },
+  {
+    id : 101,
+    title: '1:1 Call',
+    description: 'Cold Mailing/CV/lnterviews etc',
+    subfunction : '60 mins',
+    function : 'Video Meeting',
+    price: 50,
+    discoutedprice : 40,
+    type : 'Digital Products',
+    rating : 4.8,
+    sales : 100,
+    tags:[
+      {
+        name : 'Best Seller',
+        color : 'bg-yellow-400'
+      },
+      {
+        name : 'Popular',
+        color : 'bg-green-400'
+      }
+    ]
   }
+
 ]
