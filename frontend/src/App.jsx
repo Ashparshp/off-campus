@@ -5,6 +5,7 @@ import './App.css'
 import Navbar from './components/Navbar/Navbar'
 import Hero from './components/HeroSection/Hero'
 import NumberCounter from './components/NumberCounter/NumberCounter'
+import Products from './components/ProductsSection/Products'
 
 function App() {
   const [isOpen, setIsOpen] = useState(false)
@@ -23,6 +24,7 @@ function App() {
         <Navbar isOpen={isOpen} handleSubMenu={handleSubMenu} />
         <Hero />
         <NumberCounter/>
+        <Products/>
       </main>
     </>
   )
