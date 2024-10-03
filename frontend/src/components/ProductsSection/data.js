@@ -1,8 +1,7 @@
+
+
 export const tabs = [
-  {
-    id: 1,
-    title: 'All',
-  },
+  
   {
     id: 2,
     title: '1:1 call',
@@ -30,8 +29,10 @@ export const products = [
 
   {
     id : 101,
-    title: '1:1 Call',
-    description: 'Cold Mailing/CV/lnterviews etc',
+    title: '1:1 Mentorship',
+    image : 'bgimage.png',
+    icon : 'clock',
+    description: 'Facing issues to land that off campus opportuniy? Book one and get it resolved!',
     subfunction : '60 mins',
     function : 'Video Meeting',
     price: 50,
@@ -52,8 +53,34 @@ export const products = [
   },
   {
     id : 101,
-    title: '1:1 Call',
-    description: 'Cold Mailing/CV/lnterviews etc',
+    title: '1:1 Mentorship',
+    image : 'bgimage.png',
+    icon : 'clock',
+    description: 'Facing issues to land that off campus opportuniy? Book one and get it resolved!',
+    subfunction : '60 mins',
+    function : 'Video Meeting',
+    price: 50,
+    discoutedprice : 40,
+    type : 'Priority DM',
+    rating : 4.8,
+    sales : 100,
+    tags:[
+      {
+        name : 'Best Seller',
+        color : 'bg-yellow-400'
+      },
+      {
+        name : 'Popular',
+        color : 'bg-green-400'
+      }
+    ]
+  },
+  {
+    id : 101,
+    title: '1:1 Mentorship',
+    image : 'bgimage.png',
+    icon : 'clock',
+    description: 'Facing issues to land that off campus opportuniy? Book one and get it resolved!',
     subfunction : '60 mins',
     function : 'Video Meeting',
     price: 50,
@@ -74,8 +101,10 @@ export const products = [
   },
   {
     id : 101,
-    title: '1:1 Call',
-    description: 'Cold Mailing/CV/lnterviews etc',
+    title: '1:1 Mentorship',
+    image : 'bgimage.png',
+    icon : 'clock',
+    description: 'Facing issues to land that off campus opportuniy? Book one and get it resolved!',
     subfunction : '60 mins',
     function : 'Video Meeting',
     price: 50,
@@ -94,49 +123,5 @@ export const products = [
       }
     ]
   },
-  {
-    id : 101,
-    title: '1:1 Call',
-    description: 'Cold Mailing/CV/lnterviews etc',
-    subfunction : '60 mins',
-    function : 'Video Meeting',
-    price: 50,
-    discoutedprice : 40,
-    type : 'Digital Products',
-    rating : 4.8,
-    sales : 100,
-    tags:[
-      {
-        name : 'Best Seller',
-        color : 'bg-yellow-400'
-      },
-      {
-        name : 'Popular',
-        color : 'bg-green-400'
-      }
-    ]
-  },
-  {
-    id : 101,
-    title: '1:1 Call',
-    description: 'Cold Mailing/CV/lnterviews etc',
-    subfunction : '60 mins',
-    function : 'Video Meeting',
-    price: 50,
-    discoutedprice : 40,
-    type : 'Digital Products',
-    rating : 4.8,
-    sales : 100,
-    tags:[
-      {
-        name : 'Best Seller',
-        color : 'bg-yellow-400'
-      },
-      {
-        name : 'Popular',
-        color : 'bg-green-400'
-      }
-    ]
-  }
 
 ]

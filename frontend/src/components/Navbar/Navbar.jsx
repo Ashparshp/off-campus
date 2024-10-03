@@ -26,7 +26,7 @@ const Navbar = ({isOpen,handleSubMenu}) => {
                 NavbarMenu.map((item) => {
                   return  (
                   <li key={item.id}>
-                    <a href={item.link} className='inline-block text-zinc-200 text-sm xl:text-base py-1 px-2 xl:px-3 hover:text-tertiary-100 transition-all duration-300 font-semibold'>{item.name}</a>
+                    <a href={item.url} className='inline-block text-zinc-200 text-sm xl:text-base py-1 px-2 xl:px-3 hover:text-tertiary-100 transition-all duration-300 font-semibold'>{item.name}</a>
                   </li>
                   )
                   })

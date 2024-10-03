@@ -3,12 +3,13 @@ import ActionButton from './ActionButton'
 import {motion} from 'framer-motion'
 import { SlideRight } from '../../utility/animations'
 import { BackgroundLines } from '../ui/background-lines'
+import { NavLink } from 'react-router-dom'
 
 
 const Hero = () => {
   return (
     <div className='relative'>
-    <BackgroundLines className="container overflow-y-hidden  ">
+    
       {/* brand Info */}
       <div className=' py-14 md:my-20'>
         <div className='text-center space-y-6 text-white'>
@@ -46,10 +47,14 @@ const Hero = () => {
            className='lg:text-xl text-zinc-400'>We help you find perfect tutor for 1-on-1 lessons</motion.p>
 
           {/* Action Button */}
+
           <motion.div variants={SlideRight(0.9)}
           initial='hidden'
           animate='visible'>
-          <ActionButton/>
+           <NavLink to='/products'>
+            <ActionButton />
+            </NavLink>
+         
           </motion.div>
          
           
@@ -65,7 +70,7 @@ const Hero = () => {
      
       </div>
      
-    </BackgroundLines>
+    
 
     </div>
   )

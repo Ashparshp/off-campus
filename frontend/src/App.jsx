@@ -5,7 +5,11 @@ import './App.css'
 import Navbar from './components/Navbar/Navbar'
 import Hero from './components/HeroSection/Hero'
 import NumberCounter from './components/NumberCounter/NumberCounter'
-import Products from './components/ProductsSection/Products'
+
+import { Route, Routes } from "react-router-dom";
+import HomePage from './pages/HomePage/HomePage'
+import ProductsPage from './pages/ProductsPage/ProductsPage'
+
 
 function App() {
   const [isOpen, setIsOpen] = useState(false)
@@ -20,12 +24,14 @@ function App() {
 
   return (
     <>
-      {/* Restrict overflow to horizontal only */}
-      <main className='' onClick={closeSubMenu}>
+     
+      <main  onClick={closeSubMenu}>
         <Navbar isOpen={isOpen} handleSubMenu={handleSubMenu} />
-        <Hero />
-        <NumberCounter/>
-        <Products/>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/products" element={<ProductsPage />} />
+        </Routes>
+      
       </main>
     </>
   )
