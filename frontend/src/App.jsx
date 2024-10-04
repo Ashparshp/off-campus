@@ -27,9 +27,9 @@ function App() {
     <>
      
       <main  onClick={closeSubMenu}>
-        <Navbar isOpen={isOpen} handleSubMenu={handleSubMenu} />
+      <Navbar isOpen={isOpen} handleSubMenu={handleSubMenu} />
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<><HomePage /></>} />
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/courses" element={<Course />} />
         </Routes>

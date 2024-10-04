@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import screenfull from 'screenfull';
 import { FaPlay } from "react-icons/fa";
 import { FaPause } from "react-icons/fa";
@@ -6,7 +6,7 @@ import { TbRewindBackward10 } from "react-icons/tb";
 import { TbRewindForward10 } from "react-icons/tb";
 import { MdFullscreen } from "react-icons/md";
 
-const VideoPlayer = () => {
+const VideoPlayer = ({url}) => {
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -63,9 +63,19 @@ const VideoPlayer = () => {
     }
   };
 
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.load(); // Reload video when URL changes
+      setIsPlaying(false); // Pause the video when URL changes
+      setProgress(0); // Reset progress
+      setCurrentTime("00:00"); // Reset current time
+      setDuration("00:00"); // Reset duration until video loads metadata
+    }
+  }, [url]);
+
   return (
-    <div className="flex justify-center items-center p-4">
-      <div className="relative w-full max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-4xl bg-black rounded-lg group">
+    <div className="flex justify-center items-center py-4">
+      <div className="relative w-full max-w-5xl bg-black rounded-lg group">
         {/* Video Element */}
         <video
           ref={videoRef}
@@ -76,12 +86,12 @@ const VideoPlayer = () => {
           disablePictureInPicture
           onContextMenu={(e) => e.preventDefault()}
         >
-          <source src="https://d1pghkbs868271.cloudfront.net/2020-10-05%2022-21-43.mp4" type="video/mp4" />
+          <source src={url}type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
         {/* Custom Controls */}
-        <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-75 md:py-3 px-2 md:px-5 flex flex-row justify-between items-center text-white space-y-2 md:space-y-0 transition-opacity duration-500 opacity-0 group-hover:opacity-100">
+        <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-75 md:py-3 px-2 md:px-5 flex flex-row justify-between items-center text-white space-y-2 md:space-y-0 transition-opacity duration-500 md:opacity-0 group-hover:opacity-100">
           <div className="flex items-center space-x-2">
             {/* 10 seconds Back Button */}
             <button onClick={rewind10Seconds} className="md:playerButton">
