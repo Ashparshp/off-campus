@@ -16,6 +16,9 @@ html {
   :root {
     --radius: 0.5rem;
   }
+  .playerButton { 
+    @apply text-white bg-gray-800 px-2 py-1 md:px-4 md:py-2 rounded-md font-semibold text-sm md:text-base;
+  }
 }
 
 @layer utilities {
