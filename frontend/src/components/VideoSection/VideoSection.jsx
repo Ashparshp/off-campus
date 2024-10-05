@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import VideoPlayer from '../VideoPlayer/VideoPlayer';
 import Navbar from '../Navbar/Navbar';
+import {TheosPlayer} from "@aka_theos/react-hls-player";
 import { motion } from 'framer-motion';
 
 const VideoSection = ({ module }) => {
@@ -22,9 +23,12 @@ const VideoSection = ({ module }) => {
         className="container text-white"
       >
         {/* Video */}
-        <div className="mb-8">
+        <div className="mb-8 w-[20%]">
           {/* Update the video player with the new URL when the module changes */}
-          <VideoPlayer url={videoUrl} />
+          <TheosPlayer
+        
+    src={videoUrl}
+    autoPlay={false}/>
         </div>
 
         {/* Heading */}

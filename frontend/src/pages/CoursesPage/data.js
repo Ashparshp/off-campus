@@ -4,7 +4,7 @@ export const data = [
     title: 'Introduction to React',
     description: 'An introductory course to the basics of React.js and its core concepts.',
     duration: '20 mins',
-    videourl : '/Courses/Map.mp4',
+    videourl : '/Outputs/SVID_20200717_102349_1.m3u8',
     resource : '/Courses/Ashwani_Dey-@latest.pdf'
   },
   {
@@ -12,7 +12,7 @@ export const data = [
     title: 'Understanding JSX',
     description: 'Learn about JSX and how it integrates HTML with JavaScript in React applications.',
     duration: '15 mins',
-    videourl : '/Courses/SVID_20200717_102349_1.mp4'
+    videourl : '/Outputs/Map.m3u8'
   },
   {
     id: 3,
