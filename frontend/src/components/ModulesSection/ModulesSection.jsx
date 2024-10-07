@@ -20,8 +20,8 @@ const ModulesSection = ({data,handleModuleChange}) => {
             
           
 
-    <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 md:w-[19rem] h-screen transition-transform -translate-x-full md:translate-x-0" aria-label="Sidebar">
-      <div class="h-full px-4 pt-4 overflow-y-auto bg-gray-800">
+    <aside id="logo-sidebar" class="fixed top-[4rem] left-0 z-40 w-64 md:w-[19rem] h-screen transition-transform -translate-x-full md:translate-x-0" aria-label="Sidebar">
+      <div class="h-full px-4 pt-4 overflow-y-auto bg-gray-black">
       
           <ul class="space-y-2 font-medium">
           <div className='p-2 text-white font-[800] text-2xl'>Content</div>

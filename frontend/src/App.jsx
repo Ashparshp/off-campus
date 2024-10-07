@@ -27,7 +27,8 @@ function App() {
   return (
     <>
      
-      <main  onClick={closeSubMenu}>
+      <main  onClick={closeSubMenu} >
+      
       <Navbar isOpen={isOpen} handleSubMenu={handleSubMenu} />
         <Routes>
           <Route path="/" element={<><HomePage /></>} />

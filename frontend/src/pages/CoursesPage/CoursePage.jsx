@@ -13,7 +13,7 @@ const CoursePage = () => {
   return (
     <>
     
-    <div className='md:flex'>
+    <div className='md:flex mt-20'>
 
       <ModulesSection data={data} handleModuleChange={handleModuleChange}/>
       <VideoSection data={data} module={module}/>

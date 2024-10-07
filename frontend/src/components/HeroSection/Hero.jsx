@@ -8,9 +8,14 @@ import { NavLink } from 'react-router-dom'
 
 const Hero = () => {
   return (
-    <div className='relative'>
+    <div className='relative container'>
     
       {/* brand Info */}
+      <div className="h-[40rem] w-full bg-black  bg-grid-white/[0.2]  relative flex items-center justify-center">
+      {/* Radial gradient for the container to give a faded look */}
+      <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black  [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+      
+    
       <div className=' py-14 md:my-20'>
         <div className='text-center space-y-6 text-white'>
          
@@ -19,24 +24,24 @@ const Hero = () => {
           variants={SlideRight(0.4)}
           initial='hidden'
           animate='visible'
-          className='text-orange-600 uppercase font-semibold'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</motion.p>
+          className='text-white uppercase font-semibold'>Lorem ipsum dolor sit  </motion.p>
 
 
           <motion.h2 
             variants={SlideRight(0.6)}
             initial='hidden'
             animate='visible'
-          className="relative z-20 text-5xl lg:text-7xl font-[700] text-center  font-sans tracking-tight">
+            className="text-4xl sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 ">
        
-            Find Your  {" "}
-            <div className="relative mx-auto inline-block w-max [filter:drop-shadow(0px_1px_3px_rgba(27,_37,_80,_0.14))]">
+            Find Your {" "} Perfect job 
+            {/* <div className="relative mx-auto inline-block w-max [filter:drop-shadow(0px_1px_3px_rgba(27,_37,_80,_0.14))]">
               <div className="absolute left-0 top-[1px] bg-clip-text bg-no-repeat text-transparent bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 [text-shadow:0_0_rgba(0,0,0,0.1)]">
                 <span>Perfect Tour</span>
               </div>
               <div className="relative bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500">
                 <span>Perfect Tour  </span>
               </div>
-            </div>
+            </div> */}
           </motion.h2>
 
 
@@ -64,7 +69,7 @@ const Hero = () => {
      
        
       </div>
-
+      </div>
       {/* Image */}
       <div>
      

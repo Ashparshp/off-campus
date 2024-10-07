@@ -11,7 +11,7 @@ const ProductsPage = () => {
     setData(newData);
   }
   return (
-    <div className='md:flex'>
+    <div className='md:flex mt-20'>
       <SideBar handleTabs={handleTabs}/>
       <Products data={data} handleTabs={handleTabs}/>
     </div>

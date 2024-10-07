@@ -41,12 +41,13 @@ const SideBar = ({handleTabs}) => {
   
 
   return (
+    <>
     <motion.aside
     initial={{opacity:0}}
       animate={{opacity:1}}
       transition={{duration:0.5,delay:0.5}}
       id="logo-sidebar"
-      className="sticky top-0 left-0 z-40 w-auto h-screen transition-transform -translate-x-full border-r sm:translate-x-0 text-zinc-400 hidden md:block pr-4 xl:pl-[5rem] lg:pl-[4rem] py-5"
+      className="fixed top-[4rem] left-0 z-40 w-auto h-screen transition-transform -translate-x-full border-r sm:translate-x-0 text-zinc-400 hidden md:block pr-4 xl:pl-[5rem] lg:pl-[4rem] py-5"
       aria-label="Sidebar"
     >
       <div className="h-full px-3 pb-4 overflow-y-auto dark:bg-gray-800">
@@ -68,6 +69,9 @@ const SideBar = ({handleTabs}) => {
         </ul>
       </div>
     </motion.aside>
+    <div class="p-4 sm:ml-64 md:block hidden"> 
+    </div>
+    </>
   );
 };
 

@@ -16,7 +16,7 @@ const Products = ({data,handleTabs}) => {
       {/* Sticky tabs container */}
      
 
-      <div className='sticky top-0 z-10 md:hidden' id="products">
+      <div className='sticky top-[3.2rem] z-10 md:hidden' id="products">
         <Tabs defaultValue="1:1 call" className="w-full flex lg:justify-center items-center">
           <TabsList>
             {tabs.map((tab) => (

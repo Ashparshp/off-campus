@@ -4,6 +4,7 @@ import {MdMenu} from 'react-icons/md'
 import {motion} from 'framer-motion';
 import Hamburger from './Hamburger';
 
+
 const Navbar = ({isOpen,handleSubMenu}) => {
   
   return (
@@ -12,8 +13,9 @@ const Navbar = ({isOpen,handleSubMenu}) => {
       initial={{opacity:0}}
       animate={{opacity:1}}
       transition={{duration:0.5,delay:0.5}}
+      className='fixed top-0 left-0 right-0 z-50  shadow-md'
       >
-        <div className='container lg:grid lg:grid-cols-[1fr_auto_1fr] flex justify-between items-center py-6'>
+        <div className='container lg:grid lg:grid-cols-[1fr_auto_1fr] flex justify-between items-center py-2  bg-clip-padding backdrop-blur-lg bg-opacity-80'>
           {/* Logo Section */}
           <div className= "text-2xl flex items-center gap-2 font-bold text-primary">
           <p className=''>OFF CAMPUS</p>
@@ -21,7 +23,7 @@ const Navbar = ({isOpen,handleSubMenu}) => {
 
           {/* Menu Section */}
           <div className='hidden lg:block '>
-            <ul className='flex items-center gap-6'>  
+            <ul className='flex max-w-fit  inset-x-0 mx-auto border border-transparent dark:border-white/[0.2] rounded-full bg-black  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]  pr-2 pl-8 py-2  items-center justify-center space-x-4'>  
               {
                 NavbarMenu.map((item) => {
                   return  (
@@ -51,7 +53,7 @@ const Navbar = ({isOpen,handleSubMenu}) => {
       </motion.nav>
 
       {/* Mobile SideBar section */}
-      <Hamburger isOpen={isOpen}/>
+      <Hamburger isOpen={isOpen} handleSubMenu={handleSubMenu}/>
     </>
   )
 }
