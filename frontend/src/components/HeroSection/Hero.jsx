@@ -8,7 +8,7 @@ import { NavLink } from 'react-router-dom'
 
 const Hero = () => {
   return (
-    <div className='relative container'>
+    <div className='relative container  '>
     
       {/* brand Info */}
       <div className="h-[40rem] w-full bg-black  bg-grid-white/[0.2]  relative flex items-center justify-center">
@@ -31,9 +31,9 @@ const Hero = () => {
             variants={SlideRight(0.6)}
             initial='hidden'
             animate='visible'
-            className="text-4xl sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 ">
+            className="text-6xl sm:text-7xl relative z-20  font-groplet-style">
        
-            Find Your {" "} Perfect job 
+            Find Your <br className='md:hidden'/>Perfect job
             {/* <div className="relative mx-auto inline-block w-max [filter:drop-shadow(0px_1px_3px_rgba(27,_37,_80,_0.14))]">
               <div className="absolute left-0 top-[1px] bg-clip-text bg-no-repeat text-transparent bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 [text-shadow:0_0_rgba(0,0,0,0.1)]">
                 <span>Perfect Tour</span>

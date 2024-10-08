@@ -11,6 +11,7 @@ import HomePage from './pages/HomePage/HomePage'
 import ProductsPage from './pages/ProductsPage/ProductsPage'
 import Course from './pages/CoursesPage/CoursePage'
 import Test from './pages/TestPage/Test'
+import CourseDescPage from './pages/CourseDescriptionPage/CourseDescPage'
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
           <Route path="/" element={<><HomePage /></>} />
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/courses" element={<Course />} />
+          <Route path="/courses/:slug" element={<CourseDescPage />} />
           <Route path="/test" element={<Test />} />
         </Routes>
       

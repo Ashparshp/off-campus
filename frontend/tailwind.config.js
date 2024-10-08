@@ -26,7 +26,8 @@ export default {
   			},
   			tertiary: {
   				'100': '#00ADB5'
-  			}
+  			},
+				crazy_purple: '#631AFF',
   		},
   		container: {
   			center: 'true',

@@ -33,7 +33,7 @@ const TopProducts = () => {
   return (
     <div className='container md:my-20 my-10 z-10 relative'>
       
-      <h1 className='md:text-[3rem] text-[2rem] font-[900] text-white text-center z-10'>Top Products</h1>
+      <h1 className='text-[3rem]  text-center z-10 font-groplet-style'>Top Products</h1>
 
       <div className='flex md:flex-row flex-col mt-10 gap-20'>
         {cardData.map((card, index) => (
@@ -43,7 +43,7 @@ const TopProducts = () => {
         
         gradientOpacity = {0.4}
       >
-        <a href="#" className=" rounded-lg p-4 flex flex-col gap-9 w-full ">
+        <a href="/courses/101" className=" rounded-lg p-4 flex flex-col gap-9 w-full ">
   <img
     alt=""
     src={cardData[0].img}
