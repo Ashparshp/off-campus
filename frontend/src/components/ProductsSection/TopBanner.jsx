@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
 
 const courses = [
   { id: 'all', name: 'All Courses' },
@@ -13,22 +14,27 @@ const courses = [
 const TopBanner = ({handleTabs}) => {
   const [selectedCourse, setSelectedCourse] = useState('all')
 
+ 
+
   return (
-    <div className="container sticky top-[3.2rem] md:top-20">
-      <div className="w-full mx-auto bg-secondary-300  px-5 py-5 md:px-10 md:py-8 rounded-xl bg-clip-padding backdrop-blur-lg bg-opacity-80">
+    <motion.div className="md:container sticky top-[3.2rem] md:top-20 z-20" 
+    initial={{opacity:0}}
+    animate={{opacity:1}}
+    transition={{duration:0.5,delay:0.5}}>
+      <div className="w-full mx-auto bg-secondary-300  px-5 py-5 md:px-10 md:rounded-xl">
         <h1 className="text-3xl font-bold mb-2 text-white ">Our Products</h1>
         <p className="text-gray-300 mb-6  md:block hidden">
           You can start learning these courses and get certified withing a days 
         </p>
-        <div className="flex whitespace-nowrap gap-4 overflow-y-auto">
+        <div className="flex whitespace-nowrap gap-4 overflow-y-auto pb-3">
           {courses.map((course) => (
             <button
               key={course.id}
-              onClick={() => handleTabs(course.id)}
+              onClick={() => {handleTabs(course.id) (setSelectedCourse(course.id))}}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors
                 ${
                   selectedCourse === course.id
-                    ? 'bg-emerald-500 text-white'
+                    ? 'bg-black text-white'
                     : 'bg-white text-gray-700 hover:bg-gray-100'
                 }`}
             >
@@ -38,7 +44,7 @@ const TopBanner = ({handleTabs}) => {
         </div>
       </div>
       
-    </div>
+    </motion.div>
   )
 }
 

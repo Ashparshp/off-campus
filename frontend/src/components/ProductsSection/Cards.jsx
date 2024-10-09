@@ -1,6 +1,7 @@
 import { ChevronRight } from "lucide-react"
 import { Star } from "lucide-react"
 import { MdOutlineSell } from "react-icons/md";
+import { motion } from "framer-motion"
 
 
 export default function Cards({
@@ -11,7 +12,11 @@ export default function Cards({
   totalChallenges = 9
 }) {
   return (
-    <div className="grid md:grid-cols-2 w-full max-w-3xl overflow-hidden rounded-xl bg-white shadow-lg">
+    <motion.div className="grid md:grid-cols-2 w-full max-w-3xl overflow-hidden rounded-xl bg-white shadow-lg"  initial={{opacity:0}}
+    whileInView={{opacity:1}}
+    transition={{duration:0.5,delay:0.5}}
+
+   >
       <div className="flex flex-col justify-between bg-indigo-900 p-6 text-white gap-4">
         <div className=" space-y-1">
           <h6 className="mb-2 text-sm font-medium uppercase text-indigo-300">Course</h6>
@@ -46,6 +51,6 @@ export default function Cards({
           Buy Now
         </button>
       </div>
-    </div>
+    </motion.div>
   )
 }

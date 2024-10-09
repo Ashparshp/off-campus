@@ -24,7 +24,7 @@ const Hamburger = ({isOpen,handleSubMenu}) => {
             <ul className='flex flex-col  pl-9 pt-8 gap-6'>
               {NavbarMenu.map((item) => (
                 <li key={item.id}>
-                  <NavLink to={item.url} >{item.name}</NavLink>
+                  <a href={item.url} >{item.name}</a>
                 </li>
               ))}
             </ul>
