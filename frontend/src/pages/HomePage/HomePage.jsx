@@ -4,6 +4,8 @@ import NumberCounter from '@/components/NumberCounter/NumberCounter'
 import React from 'react'
 import TopProducts from '@/components/TopProducts/TopProducts'
 import Ripple from '@/components/ui/ripple'
+import FeatureSection from '@/components/FeatureSection.jsx/FeatureSection'
+import NewTopProducts from '@/components/TopProducts/NewTopProducts'
 
 const HomePage = () => {
   return (
@@ -27,10 +29,10 @@ const HomePage = () => {
        
        
         <NumberCounter/>
-        <TopProducts/>
+        <NewTopProducts/>
         
         </div>
-        
+        <FeatureSection/>
         
         
         <MarqueeDemo/>

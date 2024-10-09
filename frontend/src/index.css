@@ -70,8 +70,8 @@ html {
     @apply flex flex-col items-center justify-center bg-secondary-300  px-10 py-5 rounded-xl
   }
 
-  .font-groplet-style{
-    @apply bg-gradient-to-br to-[#631aff] from-[#fff9f8] bg-clip-text text-transparent font-groplet 
+  .font-style-gradient {
+    @apply bg-gradient-to-br to-[#631aff] from-[#fff9f8] bg-clip-text text-transparent font-[800]
   }
 }
 
