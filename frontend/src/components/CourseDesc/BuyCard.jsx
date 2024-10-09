@@ -1,5 +1,6 @@
 import React from 'react'
 import   { CheckCircle2, CheckIcon }  from 'lucide-react'
+import BuyNowButton from './BuyNowButton'
 
 const BuyCard = () => {
   return (
@@ -15,7 +16,7 @@ const BuyCard = () => {
                 <span className="text-gray-400 line-through ml-2">₹7000</span>
               </div>
               <h4 className="text-xl font-semibold mb-4">This Course Includes :</h4>
-              <ul className="space-y-2">
+              <ul className="space-y-2 mb-5">
                 {[
                   "No Pre-requisite Required",
                   "170+ hours Video Content",
@@ -29,6 +30,9 @@ const BuyCard = () => {
                   </li>
                 ))}
               </ul>
+              <div className='w-full flex flex-col'>
+              <BuyNowButton/>
+              </div>
             </div>
           </div>
   )

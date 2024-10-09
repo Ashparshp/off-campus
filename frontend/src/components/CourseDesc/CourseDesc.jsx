@@ -1,6 +1,7 @@
 import React from 'react'
 import BuyCard from './BuyCard'
 import { Star } from 'lucide-react'
+import BuyNowButton from './BuyNowButton'
 
 const CourseDesc = () => {
   return (
@@ -23,8 +24,11 @@ const CourseDesc = () => {
                   <Star key={i} className="w-4 h-4 text-yellow-400 inline" fill="currentColor" />
                 ))}
               </div>
+              
             </div>
-
+          
+            <BuyNowButton/>
+            
            
           </div>
         </div>
