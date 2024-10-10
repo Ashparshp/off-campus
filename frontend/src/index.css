@@ -73,6 +73,10 @@ html {
   .font-style-gradient {
     @apply bg-gradient-to-br to-[#631aff] from-[#fff9f8] bg-clip-text text-transparent font-[800]
   }
+
+  .margin{
+    @apply md:mt-20 mt-[3.4rem]
+  }
 }
 
 @layer utilities {

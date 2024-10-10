@@ -4,7 +4,7 @@ import { Star, Clock, BookOpen } from "lucide-react"
 
 export default function Card ({ course }){
   return (
-  <a href="/courses/101" className="bg-secondary-300 text-white rounded-lg shadow-md overflow-hidden">
+  <a href={`/courses/101`} className="bg-secondary-300 text-white rounded-lg shadow-md overflow-hidden">
     <img src={course.image} alt={course.title} className="w-full  object-cover" />
     <div className="p-4">
 

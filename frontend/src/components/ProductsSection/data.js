@@ -49,7 +49,11 @@ export const products = [
         name : 'Popular',
         color : 'bg-green-400'
       }
-    ]
+    ],
+    
+
+
+
   },
   {
     id : 101,

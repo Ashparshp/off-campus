@@ -13,6 +13,8 @@ import Course from './pages/CoursesPage/CoursePage'
 import Test from './pages/TestPage/Test'
 import CourseDescPage from './pages/CourseDescriptionPage/CourseDescPage'
 import PaymentPage from './pages/PaymentPage/PaymentPage'
+import CallPage from './pages/CallPage/CallPage'
+import ErrorPage from './pages/ErrorPage/ErrorPage'
 
 
 function App() {
@@ -34,12 +36,15 @@ function App() {
       <Navbar isOpen={isOpen} handleSubMenu={handleSubMenu} />
         <Routes>
           <Route path="/" element={<><HomePage /></>} />
+          <Route path="*" element={<><ErrorPage /></>} />
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/courses" element={<Course />} />
           <Route path="/courses/:slug" element={<CourseDescPage />} >
             
           </Route>
           <Route path="/courses/:slug/pay" element={<PaymentPage />} />
+          <Route path="/bookcall" element={<CallPage />} />
+          <Route path="/bookcall/pay" element={<PaymentPage />} />
           <Route path="/test" element={<Test />} />
         </Routes>
       

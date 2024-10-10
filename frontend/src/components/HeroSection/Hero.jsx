@@ -2,8 +2,9 @@ import React from "react";
 import ActionButton from "./ActionButton";
 import { motion } from "framer-motion";
 import { SlideRight } from "../../utility/animations";
-import { BackgroundLines } from "../ui/background-lines";
-import { NavLink } from "react-router-dom";
+import ActionButton2 from "./ActionButton2";
+import { Dialog,DialogTrigger,DialogContent } from "../ui/dialog";
+import DateTimePicker from "../CallSection/DateTimePicker";
 
 const Hero = () => {
   return (
@@ -57,10 +58,27 @@ const Hero = () => {
               variants={SlideRight(0.9)}
               initial="hidden"
               animate="visible"
+              className="flex flex-row items-center justify-center space-x-4"
             >
-              <NavLink to="/products">
+              <a href="/products">
                 <ActionButton />
-              </NavLink>
+              </a>
+              {/* <a href="/bookcall">
+              <ActionButton2/>
+              </a> */}
+
+              <Dialog>
+                <DialogTrigger>
+                  <ActionButton2 />
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-[425px] bg-inherit border-none ">
+                  
+                    
+                    <DateTimePicker />
+                  
+                </DialogContent>
+              </Dialog>
+             
             </motion.div>
           </div>
         </div>
