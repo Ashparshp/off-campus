@@ -15,7 +15,7 @@ const ProductsPage = () => {
   }
   return (
     
-    <div className=' mt-20'>
+    <div className='margin'>
       <TopBanner handleTabs={handleTabs}/>
       <ProductsSection data={data}/>
       {/* <div className='md:flex'>
