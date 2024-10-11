@@ -71,7 +71,7 @@ const Hero = () => {
                 <DialogTrigger>
                   <ActionButton2 />
                 </DialogTrigger>
-                <DialogContent className="sm:max-w-[425px] bg-inherit border-none ">
+                <DialogContent className="sm:max-w-[425px] bg-inherit border-none " closeButton = "right-7 top-7">
                   
                     
                     <DateTimePicker />

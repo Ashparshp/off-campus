@@ -18,7 +18,7 @@ export const NavbarMenu = [
     {
       "id": 4,
       "name": "Courses",
-      "url": "/courses"
+      "url": "/courses/101"
     }
   
   ]

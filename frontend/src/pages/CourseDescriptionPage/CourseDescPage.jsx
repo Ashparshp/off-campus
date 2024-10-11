@@ -4,7 +4,7 @@ import React from 'react'
 
 const CourseDescPage = () => {
   return (
-    <div className='mt-20'>
+    <div className='margin'>
       <CourseDesc/>
  
     </div>
