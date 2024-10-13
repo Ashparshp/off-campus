@@ -77,6 +77,8 @@ html {
   .margin{
     @apply md:mt-20 mt-[3.4rem]
   }
+
+  
 }
 
 @layer utilities {
@@ -90,3 +92,4 @@ html {
       scrollbar-width: none;  /* Firefox */
 }
 }
+
