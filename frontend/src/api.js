@@ -6,4 +6,4 @@ const api = axios.create({
     // withCredentials: true,
 });
 
-export const googleAuth = (code) => api.post(`auth/google`,{code});
+export const googleAuth = (code) => api.post(`auth/google?code=${code}`,{code});

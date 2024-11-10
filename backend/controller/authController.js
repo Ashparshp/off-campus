@@ -7,7 +7,7 @@ import jwt from "jsonwebtoken";
 
 export const googleLogin  = async (req, res) => {
   try {
-    const {code} = req.body;
+    const code = req.query.code;
    
     const oauth2Client = new google.auth.OAuth2(
       process.env.GOOGLE_CLIENT_ID,
