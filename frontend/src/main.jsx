@@ -8,7 +8,7 @@ import { MainContext, MainProvider } from './context/MainContext.jsx';
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
-    <GoogleOAuthProvider clientId={import.meta.env.VITE_CLIENT_ID}>
+    <GoogleOAuthProvider clientId="907764506843-0oo08a2f1uq80iok4ml1jvji1pjglmc7.apps.googleusercontent.com">
       <MainProvider>
       <App />
       </MainProvider>
