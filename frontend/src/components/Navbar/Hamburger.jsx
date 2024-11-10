@@ -3,6 +3,7 @@ import { motion,AnimatePresence } from 'framer-motion'
 import { NavbarMenu } from '@/mock_data/data'
 import { Link, NavLink } from 'react-router-dom'
 import { GiCrossMark } from "react-icons/gi";
+import LoginButton from '../LoginButton/LoginButton';
 
 const Hamburger = ({isOpen,handleSubMenu}) => {
   return (
@@ -27,7 +28,9 @@ const Hamburger = ({isOpen,handleSubMenu}) => {
                   <a href={item.url} >{item.name}</a>
                 </li>
               ))}
+              <LoginButton/>
             </ul>
+            
           </div>
         </motion.div>
       }

@@ -31,7 +31,7 @@ function App() {
   return (
     <>
      
-      <main  onClick={closeSubMenu} >
+      <main  >
       
       <Navbar isOpen={isOpen} handleSubMenu={handleSubMenu} />
         <Routes>

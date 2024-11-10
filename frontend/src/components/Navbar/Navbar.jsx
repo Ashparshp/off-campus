@@ -3,6 +3,7 @@ import { NavbarMenu } from '../../mock_data/data';
 import {MdMenu} from 'react-icons/md'
 import {motion} from 'framer-motion';
 import Hamburger from './Hamburger';
+import LoginButton from '../LoginButton/LoginButton';
 
 
 const Navbar = ({isOpen,handleSubMenu}) => {
@@ -15,7 +16,7 @@ const Navbar = ({isOpen,handleSubMenu}) => {
       transition={{duration:0.5,delay:0.5}}
       className='fixed top-0 left-0 right-0 z-50  shadow-md'
       >
-        <div className='container lg:grid lg:grid-cols-[1fr_auto_1fr] flex justify-between items-center py-2  bg-clip-padding backdrop-blur-lg bg-opacity-80'>
+        <div className='container  flex justify-between items-center py-2  bg-clip-padding backdrop-blur-lg bg-opacity-80'>
           {/* Logo Section */}
           <div className= "text-2xl flex items-center gap-2 font-bold text-primary">
           <p className=''>OFF CAMPUS</p>
@@ -39,10 +40,10 @@ const Navbar = ({isOpen,handleSubMenu}) => {
 
           {/* CTA Section */}
           <div className='hidden lg:block '>
-            {/* <button className='font-semibold '>Sign In</button>
-            <button className='font-semibold '>Sign In</button>  */}
+          <LoginButton/>
+         
           </div>
-
+          
           {/* Mobile Hamburger Menu */}
           <div className='lg:hidden text-primary' onClick={handleSubMenu}>
             <MdMenu className='text-4xl '/>

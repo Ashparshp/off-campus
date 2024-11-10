@@ -32,7 +32,7 @@ const CallSection = () => {
         <div className='md:hidden block '>
          <DateTimePicker/>
       </div>
-      <div className='absolute lg:w-1/4 top-10  right-20 hidden md:block'>
+      <div className='absolute lg:w-1/4 top-10 right-20 hidden md:block'>
       <DateTimePicker />
       </div>
       </div>

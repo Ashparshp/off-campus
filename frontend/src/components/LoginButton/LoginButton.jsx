@@ -1,27 +1,28 @@
-import React from 'react'
-import { useNavigate, useLocation } from 'react-router-dom'
+import React, { useContext } from 'react'
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Dialog, DialogClose, DialogContent,DialogTrigger } from '../ui/dialog';
-import { Button } from '../ui/button';
 import GoogleLoginButton from '../GoogleLoginButton/GoogleLoginButton';
+import { MainContext } from '@/context/MainContext';
 
+const LoginButton = () => {
 
-const BuyNowButton = () => {
   const navigate = useNavigate();
   const location = useLocation();  // Get the current page location
-  const [isLoggedIn, setIsLoggedIn] = React.useState(localStorage.getItem('user-info') ? true : false);
+  // const [isLoggedIn, setIsLoggedIn] = React.useState(localStorage.getItem('user-info') ? true : false);
+  const {isLoggedIn,setIsLoggedIn} = useContext(MainContext);
 
-  const handleNavigation = () => {
-    const currentPath = location.pathname;  // Get the current URL path
-    navigate(`${currentPath}/pay`);  // Append `/pay` to the current URL
+  const handleSignOut = () => {
+    localStorage.removeItem('user-info');
+    setIsLoggedIn(false);
+    navigate('/');
   }
-
   return (
     <>
     {isLoggedIn ? <button
-      onClick={handleNavigation}  
+      onClick={handleSignOut}  
       className="px-12 py-4 rounded-full bg-[#1ED760] font-bold text-white tracking-widest uppercase transform hover:scale-105 hover:bg-[#21e065] transition-colors duration-200"
     >
-      BUY NOW
+      Log Out
     </button>
     :
      <Dialog>
@@ -30,7 +31,7 @@ const BuyNowButton = () => {
       
       className="px-12 py-4 rounded-full bg-[#1ED760] font-bold text-white tracking-widest uppercase transform hover:scale-105 hover:bg-[#21e065] transition-colors duration-200"
     >
-      BUY NOW
+      Sign In
     </button>
       </DialogTrigger>
       
@@ -51,4 +52,4 @@ const BuyNowButton = () => {
   )
 }
 
-export default BuyNowButton;
+export default LoginButton
