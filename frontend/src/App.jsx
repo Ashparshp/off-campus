@@ -15,6 +15,7 @@ import CourseDescPage from './pages/CourseDescriptionPage/CourseDescPage'
 import PaymentPage from './pages/PaymentPage/PaymentPage'
 import CallPage from './pages/CallPage/CallPage'
 import ErrorPage from './pages/ErrorPage/ErrorPage'
+import Footer from './components/Footer/Footer'
 
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
           <Route path="/bookcall/pay" element={<PaymentPage />} />
           <Route path="/test" element={<Test />} />
         </Routes>
+      <Footer/>
       
       </main>
     </>

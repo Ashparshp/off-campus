@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { Button } from '../ui/button'
 import { useGoogleLogin } from '@react-oauth/google';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { googleAuth } from '@/api';
+import { googleAuth } from '@/utility/api';
 import { MainContext } from '@/context/MainContext';
 
 const GoogleLoginButton = () => {
