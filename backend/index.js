@@ -20,12 +20,36 @@ app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
+app.use((req, res, next) => {
+  res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+  next();
+});
+
+app.use((req, res, next) => {
+    res.setHeader(
+        "Content-Security-Policy",
+        "script-src * 'unsafe-inline' 'unsafe-eval';"
+    );
+    next();
+});
+
+
+
 
 const PORT = process.env.PORT || 8080;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Serve static files based on environment
+
+
+
+// ROUTES
+app.get("/keep_alive", (req, res) => {
+  res.json({test  :"I am alive"});
+});
+app.use("/api/auth",authRoutes);
+
+
 if (process.env.NODE_MODE === "production") {
   // Serve static files from the React app in production
   app.use(express.static(path.join(__dirname, '../frontend/dist')));
@@ -39,11 +63,6 @@ if (process.env.NODE_MODE === "production") {
   });
 }
 
-// ROUTES
-app.use("/api/auth",authRoutes);
-app.use("/keep_alive", (req, res) => {
-  res.send("I am alive");
-});
 
 mongoose
   .connect(process.env.MONGO_URL)
