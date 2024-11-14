@@ -1,14 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { Dialog, DialogClose, DialogContent,DialogTrigger } from '../ui/dialog';
 import { Button } from '../ui/button';
 import GoogleLoginButton from '../GoogleLoginButton/GoogleLoginButton';
+import { MainContext } from '@/context/MainContext';
 
 
 const BuyNowButton = () => {
   const navigate = useNavigate();
   const location = useLocation();  // Get the current page location
-  const [isLoggedIn, setIsLoggedIn] = React.useState(localStorage.getItem('user-info') ? true : false);
+  const {user} = useContext(MainContext);
 
   const handleNavigation = () => {
     const currentPath = location.pathname;  // Get the current URL path
@@ -17,7 +18,7 @@ const BuyNowButton = () => {
 
   return (
     <>
-    {isLoggedIn ? <button
+    {user ? <button
       onClick={handleNavigation}  
       className="px-12 py-4 rounded-full bg-[#1ED760] font-bold text-white tracking-widest uppercase transform hover:scale-105 hover:bg-[#21e065] transition-colors duration-200"
     >

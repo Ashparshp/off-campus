@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { Button } from '../ui/button'
 import { useGoogleLogin } from '@react-oauth/google';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { googleAuth } from '@/utility/api';
+import { baseURL, googleAuth } from '@/utility/api';
 import { MainContext } from '@/context/MainContext';
 
 const GoogleLoginButton = () => {
@@ -11,15 +11,17 @@ const GoogleLoginButton = () => {
   const location = useLocation();  // Get the current page location
   const {isLoggedIn,setIsLoggedIn} = useContext(MainContext);
 	const responseGoogle = async (authResult) => {
+    console.log("in");
 		try {
 			if (authResult["code"]) {
-				const result = await googleAuth(authResult.code);
-				const {email, name, image} = result.data.user;
-				const token = result.data.token;
-				const obj = {email,name, token, image};
-				localStorage.setItem('user-info',JSON.stringify(obj));
-        setIsLoggedIn(true);
-        window.location.reload();
+				// const result = await googleAuth(authResult.code);
+				// const {email, name, image} = result.data.user;
+				// const token = result.data.token;
+				// const obj = {email,name, token, image};
+				// localStorage.setItem('user-info',JSON.stringify(obj));
+        // setIsLoggedIn(true);
+        // window.location.reload();
+        console.log(authResult);
 				
 			} else {
 				console.log(authResult);
@@ -31,11 +33,20 @@ const GoogleLoginButton = () => {
 		}
 	};
 
-  const googleLogin = useGoogleLogin({
-		onSuccess: responseGoogle,
-		onError: responseGoogle,
-		flow: "auth-code",
-	});
+  // const googleLogin = useGoogleLogin({
+  //   clientId:"907764506843-0oo08a2f1uq80iok4ml1jvji1pjglmc7.apps.googleusercontent.com",
+	// 	onSuccess: (response) => console.log(response),
+	// 	onError: (response) => console.log(response),
+	// 	flow: "auth-code",
+	// });
+
+  const googleLogin = () => {
+		window.open(
+			`${baseURL}/auth/google`,
+			"_self"
+		);
+	};
+
   return (
     <Button
     variant="outline"

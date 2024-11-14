@@ -5,6 +5,7 @@ export const MainContext = createContext();
 export const MainProvider = ({ children }) => {
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [user, setUser] = useState(null);
 
 
   useLayoutEffect(() => {
@@ -18,7 +19,8 @@ export const MainProvider = ({ children }) => {
   return (
     <MainContext.Provider value={{
       isLoggedIn,
-      setIsLoggedIn
+      setIsLoggedIn,
+      user,setUser
     }}>{children}</MainContext.Provider>
   );
 }

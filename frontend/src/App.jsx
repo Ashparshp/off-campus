@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -16,10 +16,28 @@ import PaymentPage from './pages/PaymentPage/PaymentPage'
 import CallPage from './pages/CallPage/CallPage'
 import ErrorPage from './pages/ErrorPage/ErrorPage'
 import Footer from './components/Footer/Footer'
+import { baseURL } from './utility/api'
+import { MainContext } from './context/MainContext'
+import axios from 'axios'
 
 
 function App() {
   const [isOpen, setIsOpen] = useState(false)
+  const {user, setUser} = useContext(MainContext);
+
+	const getUser = async () => {
+		try {
+			const url = `${baseURL}/login/success`;
+			const response = await axios.get(url, { withCredentials: true });
+			setUser(response.data.user);
+		} catch (err) {
+			console.log(err);
+		}
+	};
+
+	useEffect(() => {
+		getUser();
+	}, []);
 
   const handleSubMenu = () => {
     setIsOpen((prev) => !prev)

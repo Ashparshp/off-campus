@@ -8,7 +8,12 @@ import authRoutes from "./routes/authRoute.js";
 import axios from "axios";
 import path from "path";
 import { fileURLToPath } from 'url';
-
+import passport from "passport";
+import cookieSession from "cookie-session";
+import OAuth2Strategy from "passport-google-oauth20";
+// import "./utils/passport.js";
+import session from "express-session";
+import { User } from "./models/User.js";
 
 
 const app = express();
@@ -18,7 +23,11 @@ app.use(helmet());
 app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors());
+app.use(cors({
+  origin:process.env.APP_URL,
+  methods:"GET,POST,PUT,DELETE",
+  credentials:true
+}));
 
 app.use((req, res, next) => {
   res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
@@ -41,13 +50,88 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 
-
-
 // ROUTES
+
+
+app.use(session({
+  secret:process.env.JWT_SECRET,
+  resave:false,
+  saveUninitialized:true
+}))
+
+
+
+
+app.use(passport.initialize());
+app.use(passport.session());  
+
+passport.use(
+  new OAuth2Strategy({
+      clientID:process.env.GOOGLE_CLIENT_ID,
+      clientSecret:process.env.GOOGLE_CLIENT_SECRET,
+      callbackURL:"/auth/google/callback",
+      scope:["profile","email"]
+  },
+  async(accessToken,refreshToken,profile,done)=>{
+      try {
+          let user = await User.findOne({googleId:profile.id});
+
+          if(!user){
+              user = new User({
+                  googleId:profile.id,
+                  username:profile.displayName,
+                  email:profile.emails[0].value,
+                  profile_picture:profile.photos[0].value
+              });
+
+              await user.save();
+          }
+
+          return done(null,user)
+      } catch (error) {
+          return done(error,null)
+      }
+  }
+  )
+)
+
+passport.serializeUser((user, done) => {
+	done(null, user);
+});
+
+passport.deserializeUser((user, done) => {
+	done(null, user);
+});
+
+app.get("/auth/google",passport.authenticate("google",{scope:["profile","email"]}));
+
+app.get("/auth/google/callback",passport.authenticate("google",{
+    successRedirect:`${process.env.APP_URL}/`,
+    failureRedirect:`${process.env.APP_URL}/auth/google`
+}))
+
+app.get("/login/success",async(req,res)=>{
+    
+    if(req.user){
+        res.status(200).json({message:"user Login",user:req.user})
+    }else{
+        res.status(400).json({message:"Not Authorized"})
+    }
+})
+
+app.get("/logout",(req,res,next)=>{
+  req.logout(function(err){
+      if(err){return next(err)}
+      res.redirect(process.env.APP_URL);
+  })
+})
+
 app.get("/keep_alive", (req, res) => {
   res.json({test  :"I am alive"});
 });
-app.use("/api/auth",authRoutes);
+// app.use("/auth",authRoutes);
+
+
 
 
 if (process.env.NODE_MODE === "production") {
