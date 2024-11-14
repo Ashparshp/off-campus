@@ -11,10 +11,10 @@ const CourseDesc = () => {
       {/* <nav className=" py-4 text-gray-400">
         <p>Home &gt; Courses &gt; Data Structures & Algorithms BootCamp @Supreme-3.0</p>
       </nav> */}
-        <h2 className="text-xl mb-4 ">Welcome to @supreme-dev Family</h2>
+        <h2 className="text-xl mb-4 ">Welcome to off-campus</h2>
         <div className="flex flex-col lg:flex-row gap-8">
           <div className="lg:w-2/3">
-            <h1 className="md:text-5xl text-4xl font-bold mb-4 pb-5 font-style-gradient ">Data Structures & Algorithms BootCamp @Supreme-3.0</h1>
+            <h1 className="md:text-5xl text-4xl font-bold mb-4 pb-5 font-style-gradient ">Some Crazy Course Name</h1>
             <div className="flex items-center gap-4 mb-8">
               <span className=" text-green-500 px-2 py-1 rounded">100+ Lectures</span>
               <span className="text-blue-400">Hindi</span>

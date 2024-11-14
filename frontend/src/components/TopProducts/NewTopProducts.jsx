@@ -3,7 +3,7 @@ import Card from "./Card"
 
 const courses = [
   {
-    image: "https://www.codehelp.in/_next/image?url=https%3A%2F%2Fdgyugonj9a9mu.cloudfront.net%2FLow_Level_Design_Supra_Batch_d3746a5a23.jpg&w=640&q=100",
+    image: "https://i0.wp.com/www.bishoprook.com/wp-content/uploads/2021/05/placeholder-image-gray-16x9-1.png?ssl=1",
     title: "Boost Your Targeted Sell With New Digital Marketing",
     rating: 4.7,
     reviews: 3341,
@@ -26,7 +26,7 @@ const courses = [
     price: 18.00,
   },
   {
-    image: "https://www.codehelp.in/_next/image?url=https%3A%2F%2Fdgyugonj9a9mu.cloudfront.net%2FLow_Level_Design_Supra_Batch_d3746a5a23.jpg&w=640&q=100",
+    image: "https://i0.wp.com/www.bishoprook.com/wp-content/uploads/2021/05/placeholder-image-gray-16x9-1.png?ssl=1",
     title: "Master in Digital Marketing 2022 And Improve Your Strategy",
     rating: 4.8,
     reviews: 1341,
@@ -49,7 +49,7 @@ const courses = [
     price: 24.00,
   },
   {
-    image: "https://www.codehelp.in/_next/image?url=https%3A%2F%2Fdgyugonj9a9mu.cloudfront.net%2FLow_Level_Design_Supra_Batch_d3746a5a23.jpg&w=640&q=100",
+    image: "https://i0.wp.com/www.bishoprook.com/wp-content/uploads/2021/05/placeholder-image-gray-16x9-1.png?ssl=1",
     title: "The Web Developer Bootcamp: A To Z Course 2022",
     rating: 4.7,
     reviews: 5341,

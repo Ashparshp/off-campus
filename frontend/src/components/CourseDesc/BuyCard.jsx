@@ -7,7 +7,7 @@ const BuyCard = () => {
     <div className="">
             <div className="h-full w-full bg-gray-800 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-60 border border-gray-100 p-6 rounded-lg">
               <img
-                src="https://www.codehelp.in/_next/image?url=https%3A%2F%2Fdgyugonj9a9mu.cloudfront.net%2FWhats_App_Image_2024_03_13_at_4_25_55_PM_cc1da9dcda.jpeg&w=640&q=100"
+                src="https://i0.wp.com/www.bishoprook.com/wp-content/uploads/2021/05/placeholder-image-gray-16x9-1.png?ssl=1"
                 alt="Course Thumbnail"
                 className="w-full h-48 object-cover rounded-lg mb-4"
               />
