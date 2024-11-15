@@ -16,7 +16,7 @@ const Navbar = ({isOpen,handleSubMenu}) => {
       transition={{duration:0.5,delay:0.5}}
       className='fixed top-0 left-0 right-0 z-50  shadow-md'
       >
-        <div className='container  flex justify-between items-center py-2  bg-clip-padding backdrop-blur-lg bg-opacity-80'>
+        <div className='container  flex lg:grid lg:grid-cols-3 justify-between items-center py-2  bg-clip-padding backdrop-blur-lg bg-opacity-80'>
           {/* Logo Section */}
           <div className= "text-2xl flex items-center gap-2 font-bold text-primary">
           <p className=''>OFF CAMPUS</p>
@@ -39,7 +39,7 @@ const Navbar = ({isOpen,handleSubMenu}) => {
           </div>
 
           {/* CTA Section */}
-          <div className='hidden lg:block '>
+          <div className='hidden lg:flex lg:justify-end '>
           <LoginButton/>
          
           </div>

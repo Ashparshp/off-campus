@@ -4,7 +4,7 @@ const Footer = () => {
   return (
    
 
-<footer class=" rounded-lg shadow bg-inherit m-4">
+<footer class=" rounded-lg shadow bg-inherit m-4 mt-10">
     <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div class="sm:flex sm:items-center sm:justify-between">
             <a href="/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
@@ -12,17 +12,15 @@ const Footer = () => {
                 <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">Off Campus</span>
             </a>
             <ul class="flex flex-wrap items-center mb-6 text-sm font-medium  sm:mb-0 text-gray-400">
+                
                 <li>
-                    <a href="#" class="hover:underline me-4 md:me-6">About</a>
+                    <a href="/privacy-policy" class="hover:underline me-4 md:me-6">Privacy Policy</a>
                 </li>
                 <li>
-                    <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
+                    <a href="/terms-of-service" class="hover:underline me-4 md:me-6">Terms and Conditions</a>
                 </li>
                 <li>
-                    <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
-                </li>
-                <li>
-                    <a href="#" class="hover:underline">Contact</a>
+                    <a href="/cancellation-and-refund-policy" class="hover:underline">Cancellation Policy</a>
                 </li>
             </ul>
         </div>

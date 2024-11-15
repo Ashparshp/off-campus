@@ -19,6 +19,9 @@ import Footer from './components/Footer/Footer'
 import { baseURL } from './utility/api'
 import { MainContext } from './context/MainContext'
 import axios from 'axios'
+import TermsAndConditions from './pages/TermsAndConditions/TermsAndConditions'
+import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy'
+import CancellationPolicy from './pages/CancellationPolicy/CancellationPolicy'
 
 
 function App() {
@@ -65,6 +68,9 @@ function App() {
           <Route path="/bookcall" element={<CallPage />} />
           <Route path="/bookcall/pay" element={<PaymentPage />} />
           <Route path="/test" element={<Test />} />
+          <Route path="/terms-of-service" element={<TermsAndConditions />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/cancellation-and-refund-policy" element={<CancellationPolicy />} />
         </Routes>
       <Footer/>
       
