@@ -19,7 +19,8 @@ const Navbar = ({isOpen,handleSubMenu}) => {
         <div className='container  flex lg:grid lg:grid-cols-3 justify-between items-center py-2  bg-clip-padding backdrop-blur-lg bg-opacity-80'>
           {/* Logo Section */}
           <div className= "text-2xl flex items-center gap-2 font-bold text-primary">
-          <p className=''>OFF CAMPUS</p>
+            <img src="/logo.png" alt=""  className='lg:w-[120px] w-[100px]'/>
+          {/* <p className=''>OFF CAMPUS</p> */}
           </div>
 
           {/* Menu Section */}

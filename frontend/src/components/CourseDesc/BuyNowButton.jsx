@@ -37,12 +37,8 @@ const BuyNowButton = () => {
       
       <DialogContent className = "border-none bg-inherit" closeButton = "right-7 top-7 text-white">
       <div className='p-6 bg-secondary-300 rounded-lg'>
-      <div className="flex items-center justify-center mb-4">
-          <div className="bg-green-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-2">
-            <span className="text-lg font-bold">OC</span>
-          </div>
-          <h2 className="text-white text-2xl font-bold">OFF CAMPUS</h2>
-        </div>
+      
+          
       <GoogleLoginButton/>
     </div>
       </DialogContent>

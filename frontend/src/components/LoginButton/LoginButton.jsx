@@ -30,7 +30,7 @@ const LoginButton = () => {
      <Dialog>
       <DialogTrigger>
       
-<button
+{/* <button
   class="group flex items-center justify-start w-11 h-11 bg-red-600 rounded-full cursor-pointer relative overflow-hidden transition-all duration-200 shadow-lg hover:w-32 hover:rounded-lg active:translate-x-1 active:translate-y-1"
 >
   <div
@@ -43,18 +43,47 @@ const LoginButton = () => {
   >
     Log In
   </div>
-</button>
+</button> */}
+
+
+
+    <button
+      class=" inline-block p-px font-semibold leading-6 text-white bg-gray-800 shadow-2xl cursor-pointer rounded-xl shadow-zinc-900 transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95"
+    >
+      <span
+        class="absolute inset-0 rounded-xl bg-gradient-to-r from-teal-400 via-blue-500 to-purple-500 p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+      ></span>
+
+      <span class="relative z-10 block px-6 py-3 rounded-xl bg-gray-950">
+        <div class="relative z-10 flex items-center space-x-2">
+          <span class="transition-all duration-500 group-hover:translate-x-1"
+            >Login</span
+          >
+          <svg
+            class="w-6 h-6 transition-transform duration-500 group-hover:translate-x-1"
+            data-slot="icon"
+            aria-hidden="true"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
+              fill-rule="evenodd"
+            ></path>
+          </svg>
+        </div>
+      </span>
+    </button>
+  
+
 
       </DialogTrigger>
       
       <DialogContent className = "border-none bg-inherit" closeButton = "right-7 top-7 text-white">
       <div className='p-6 bg-secondary-300 rounded-lg'>
-      <div className="flex items-center justify-center mb-4">
-          <div className="bg-green-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-2">
-            <span className="text-lg font-bold">OC</span>
-          </div>
-          <h2 className="text-white text-2xl font-bold">OFF CAMPUS</h2>
-        </div>
+      
       <GoogleLoginButton/>
     </div>
       </DialogContent>
