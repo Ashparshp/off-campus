@@ -25,13 +25,15 @@ const Navbar = ({isOpen,handleSubMenu}) => {
 
           {/* Menu Section */}
           <div className='hidden lg:block '>
-            <ul className='flex max-w-fit  inset-x-0 mx-auto border border-transparent dark:border-white/[0.2] rounded-full bg-black  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]  pr-2 pl-8 py-2  items-center justify-center space-x-4'>  
+            <ul className='flex w-fit  inset-x-0 mx-auto border border-transparent dark:border-white/[0.2] rounded-full bg-black  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]  pr-2 pl-8 py-2  items-center justify-center space-x-4'>  
               {
                 NavbarMenu.map((item) => {
                   return  (
-                  <li key={item.id}>
-                    <a href={item.url} className='inline-block text-zinc-200 text-sm xl:text-base py-1 px-2 xl:px-3 hover:text-tertiary-100 transition-all duration-300 font-semibold'>{item.name}</a>
+                    <a href={item.url} key={item.id} className='inline-block text-zinc-200 text-sm xl:text-base py-1 px-2 xl:px-3 hover:text-tertiary-100 transition-all duration-300 font-semibold'>
+                  <li >
+                    {item.name}
                   </li>
+                  </a>
                   )
                   })
               }

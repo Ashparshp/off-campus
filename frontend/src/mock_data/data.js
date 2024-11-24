@@ -7,18 +7,25 @@ export const NavbarMenu = [
     },
     {
       "id": 2,
-      "name": "About",
-      "url": "/about"
+      "name": "Courses",
+      "url": "/courses/101"
     },
     {
       "id": 3,
-      "name": "Products",
+      "name": "Resources",
       "url": "/products"
     },
     {
       "id": 4,
-      "name": "Courses",
-      "url": "/courses/101"
-    }
+      "name": "Session",
+      "url": "/bookcall"
+    },
+    {
+      "id": 5,
+      "name": "About",
+      "url": "/about"
+    },
+    
+    
   
   ]

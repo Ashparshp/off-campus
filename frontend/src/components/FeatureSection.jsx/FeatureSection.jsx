@@ -3,7 +3,7 @@ import { BarChart3, Calendar, BookOpen, MessageSquare } from "lucide-react"
 
 const FeatureSection = () => {
   return (
-    <div className="container ">
+    <div className="container py-20 ">
       <div className="flex justify-center w-full  mb-8 ">
         <div className="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">
           WHY CHOOSE US

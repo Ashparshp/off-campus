@@ -34,7 +34,7 @@ function App() {
 			const response = await axios.get(url, { withCredentials: true });
 			setUser(response.data.user);
 		} catch (err) {
-			console.log(err);
+			// console.log(err);
 		}
 	};
 
@@ -52,8 +52,8 @@ function App() {
 
   return (
     <>
-     
-      <main  >
+     <div className='flex flex-col min-h-screen'>
+      <main  className = "flex-grow">
       
       <Navbar isOpen={isOpen} handleSubMenu={handleSubMenu} />
         <Routes>
@@ -72,9 +72,11 @@ function App() {
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/cancellation-and-refund-policy" element={<CancellationPolicy />} />
         </Routes>
-      <Footer/>
+     
       
       </main>
+      <Footer/>
+      </div>
     </>
   )
 }

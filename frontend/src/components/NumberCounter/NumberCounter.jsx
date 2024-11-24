@@ -2,6 +2,7 @@ import React from 'react'
 import CountUp from 'react-countup'
 import FlickeringGrid from '../ui/flickering-grid'
 import { MagicCard } from '../ui/magic-card'
+import { FaStar } from 'react-icons/fa'
 
 const NumberCounter = () => {
   return (
@@ -20,31 +21,32 @@ const NumberCounter = () => {
 
         <MagicCard className='numbers' gradientColor='rgb(123, 143, 217)' gradientSize={200} gradientOpacity={0.5}>
           <p className='text-3xl font-[700]'>
-            <CountUp start = {0} end={900} duration={3} enableScrollSpy={true} scrollSpyOnce={true} />
+            <CountUp start = {0} end={150} duration={3} suffix='+'enableScrollSpy={true} scrollSpyOnce={true} />
           </p>
-          <p>Lorem</p>
+          <p>Students Placed</p>
         </MagicCard>
 
         <MagicCard className='numbers' gradientColor='rgb(123, 143, 217)' gradientSize={200} gradientOpacity={0.5}>
           <p className='text-3xl font-[700]'>
-          <CountUp end={20000} separator=',' suffix='+' duration={3} enableScrollSpy={true} scrollSpyOnce={true} />
+          <CountUp end={4000} separator=',' suffix='+' duration={3} enableScrollSpy={true} scrollSpyOnce={true} />
           </p>
-          <p>Lorem</p>
+          <p>Booking</p>
         </MagicCard>
 
         <MagicCard className='numbers' gradientColor='rgb(123, 143, 217)' gradientSize={200} gradientOpacity={0.5}>
-          <p className='text-3xl font-[700]'>
-          <CountUp start = {0} end={900} duration={3} enableScrollSpy={true} scrollSpyOnce={true} />
+          <p className='text-3xl font-[700] flex gap-2'>
+          <FaStar className='text-yellow-300'/>
+          <CountUp start = {0} end={4} duration={3} enableScrollSpy={true} scrollSpyOnce={true} />.5
           </p>
          
-          <p>Lorem</p>
+          
         </MagicCard>
 
         <MagicCard className='numbers' gradientColor='rgb(123, 143, 217)' gradientSize={200} gradientOpacity={0.5}>
           <p className='text-3xl font-[700]'>
-          <CountUp start = {0} end={900} duration={3} enableScrollSpy={true} scrollSpyOnce={true} />
+          <CountUp  end={30000} suffix='+' duration={3} enableScrollSpy={true} scrollSpyOnce={true} separator=',' />
           </p>
-          <p>Lorem</p>
+          <p>Community</p>
         </MagicCard>
         
       </div>

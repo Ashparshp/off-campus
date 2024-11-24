@@ -115,7 +115,7 @@ app.get("/login/success",async(req,res)=>{
     if(req.user){
         res.status(200).json({message:"user Login",user:req.user})
     }else{
-        res.status(400).json({message:"Not Authorized"})
+        res.status(200).json({message:"Not Authorized"})
     }
 })
 
@@ -157,15 +157,15 @@ mongoose
       console.log(`Server is running at Port: ${PORT}`);
 
 
-      const selfPingUrl = `http://localhost:${PORT}/keep_alive`;
-      setInterval(async () => {
-        try {
-          await axios.get(selfPingUrl);
-          console.log(`Self-ping successful at ${new Date().toISOString()}`);
-        } catch (error) {
-          console.error(`Self-ping failed: ${error.message}`);
-        }
-      }, 5 * 60 *  1000);
+      // const selfPingUrl = `http://localhost:${PORT}/keep_alive`;
+      // setInterval(async () => {
+      //   try {
+      //     await axios.get(selfPingUrl);
+      //     console.log(`Self-ping successful at ${new Date().toISOString()}`);
+      //   } catch (error) {
+      //     console.error(`Self-ping failed: ${error.message}`);
+      //   }
+      // }, 5 * 60 *  1000);
     });
     
   })

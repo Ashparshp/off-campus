@@ -32,10 +32,11 @@ const HomePage = () => {
         <NewTopProducts/>
         
         </div>
+        <MarqueeDemo/>
         <FeatureSection/>
         
         
-        <MarqueeDemo/>
+        
         
      
     </div>
