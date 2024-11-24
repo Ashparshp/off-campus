@@ -6,7 +6,7 @@ const TermsAndConditions = () => {
       <h1 className="text-white text-[1.5rem] font-[900] text-center">
         Terms and Conditions
       </h1>
-      <p className="text-white mx-40 mt-10">
+      <p className="text-white md:mx-40 mt-10">
         This website is operated by off-campus. Throughout the site, the terms
         “we”, “us” and “our” refer to off-campus. off-campus offers this
         website, including all information, tools and services available from

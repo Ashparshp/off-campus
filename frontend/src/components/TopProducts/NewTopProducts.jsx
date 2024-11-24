@@ -88,6 +88,7 @@ export default function NewTopProducts() {
             className="cursor-pointer"
             gradientColor={"rgb(251, 144, 20)  "}
             gradientOpacity={0.4}
+            key={index}
           >
             <Card key={index} course={course} />
             </MagicCard>

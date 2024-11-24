@@ -6,7 +6,7 @@ const PrivacyPolicy = () => {
        <h1 className="text-white text-[1.5rem] font-[900] text-center">
         Privacy Policy
       </h1>
-      <p className="text-white mx-40 mt-10">
+      <p className="text-white md:mx-40 mt-10">
       <span className="text-xl font-[600]">SECTION 1 – WHAT DO WE DO WITH YOUR INFORMATION?</span>
       <br /> <br />
 When you purchase something from our store, as part of the buying and selling process, we collect the personal information you give us such as your name, address and email address.

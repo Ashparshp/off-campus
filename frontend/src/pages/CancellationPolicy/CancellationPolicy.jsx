@@ -6,7 +6,7 @@ const CancellationPolicy = () => {
       <h1 className="text-white text-[1.5rem] font-[900] text-center">
         Cancellation & Refund Policy
       </h1>
-      <p className="text-white mx-40 mt-10">
+      <p className="text-white md:mx-40 mt-10">
         <span className="text-xl font-[600]">Rescheduling Policy</span>
         <br /> <br />
         Rescheduling of a booked session is accommodated on a case by case

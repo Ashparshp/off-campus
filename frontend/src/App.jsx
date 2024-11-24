@@ -22,6 +22,7 @@ import axios from 'axios'
 import TermsAndConditions from './pages/TermsAndConditions/TermsAndConditions'
 import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy'
 import CancellationPolicy from './pages/CancellationPolicy/CancellationPolicy'
+import ContactUs from './pages/ContactUs/ContactUs'
 
 
 function App() {
@@ -71,6 +72,7 @@ function App() {
           <Route path="/terms-of-service" element={<TermsAndConditions />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/cancellation-and-refund-policy" element={<CancellationPolicy />} />
+          <Route path="/contactus" element={<ContactUs />} />
         </Routes>
      
       
