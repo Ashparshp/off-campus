@@ -1,94 +1,60 @@
 import React from "react";
-import ActionButton from "./ActionButton";
 import { motion } from "framer-motion";
-import { SlideRight } from "../../utility/animations";
-import ActionButton2 from "./ActionButton2";
-import { Dialog,DialogTrigger,DialogContent } from "../ui/dialog";
+import { Dialog, DialogTrigger, DialogContent } from "../ui/dialog";
 import DateTimePicker from "../CallSection/DateTimePicker";
 
 const Hero = () => {
   return (
-    <div className="relative container  ">
-      {/* brand Info */}
-      <div className="h-[40rem] w-full 
-     
-      relative flex items-center justify-center">
-        {/* { bg-black  bg-grid-white/[0.2]  } */}
-        {/* Radial gradient for the container to give a faded look */}
-        <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black  [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+    <div className="relative bg-gradient-to-b from-black to-gray-900 text-white min-h-screen flex items-center justify-center">
+      {/* Particle Animation (Optional) */}
+      <div className="absolute inset-0 pointer-events-none bg-particles opacity-50"></div>
 
-        <div className=" py-14 md:my-20">
-          <div className="text-center space-y-6 text-white">
-            <motion.p
-              variants={SlideRight(0.4)}
-              initial="hidden"
-              animate="visible"
-              className="text-white uppercase font-semibold"
-            >
-              Missed on - campus opportunities?
-              {" "}
-            </motion.p>
+      <div className="text-center space-y-6 px-6 md:mt-0 -mt-20">
+        {/* Hero Text */}
+        <motion.h1
+          className="text-6xl sm:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent animate-pulse whitespace-nowrap"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          Off-Campus
+        </motion.h1>
 
-            <motion.h2
-              variants={SlideRight(0.6)}
-              initial="hidden"
-              animate="visible"
-              className="text-5xl sm:text-6xl relative z-20  font-style-gradient pb-2"
-            >
-             Off-campus is your  <br className="md:hidden" />
-             next big chance.
-              {/* <div className="relative mx-auto inline-block w-max [filter:drop-shadow(0px_1px_3px_rgba(27,_37,_80,_0.14))]">
-              <div className="absolute left-0 top-[1px] bg-clip-text bg-no-repeat text-transparent bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 [text-shadow:0_0_rgba(0,0,0,0.1)]">
-                <span>Perfect Tour</span>
-              </div>
-              <div className="relative bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500">
-                <span>Perfect Tour  </span>
-              </div>
-            </div> */}
-            </motion.h2>
+        <motion.p
+          className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          Unlock your potential with off-campus opportunities. Internships and placements made simple, accessible, and effective.
+        </motion.p>
 
-            <motion.p
-              variants={SlideRight(0.8)}
-              initial="hidden"
-              animate="visible"
-              className="lg:text-xl text-zinc-400"
-            >
-              Internships and Placements made easy.
-            </motion.p>
+        {/* Call to Action Buttons */}
+        <motion.div
+          className="flex flex-col sm:flex-row justify-center gap-4"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2 }}
+        >
+          <a
+            href="/explore"
+            className="px-6 py-3 text-lg font-medium bg-gradient-to-r from-pink-500 to-orange-500 rounded-lg hover:scale-105 transition-transform"
+          >
+            Explore Opportunities
+          </a>
 
-            {/* Action Button */}
-
-            <motion.div
-              variants={SlideRight(0.9)}
-              initial="hidden"
-              animate="visible"
-              className="flex flex-row items-center justify-center space-x-4"
-            >
-              <a href="/products">
-                <ActionButton />
-              </a>
-              {/* <a href="/bookcall">
-              <ActionButton2/>
-              </a> */}
-
-              <Dialog>
-                <DialogTrigger>
-                  <ActionButton2 />
-                </DialogTrigger>
-                <DialogContent className="sm:max-w-[425px] bg-inherit border-none " closeButton = "right-7 top-7">
-                  
-                    
-                    <DateTimePicker />
-                  
-                </DialogContent>
-              </Dialog>
-             
-            </motion.div>
-          </div>
-        </div>
+          <Dialog>
+            <DialogTrigger>
+              <button className="px-6 py-3 text-lg font-medium border border-gray-700 rounded-lg hover:bg-gray-800 transition">
+                Schedule a Call
+              </button>
+            </DialogTrigger>
+            <DialogContent className="bg-gray-900 p-6 rounded-lg">
+              <DateTimePicker />
+            </DialogContent>
+          </Dialog>
+        </motion.div>
       </div>
-      {/* Image */}
-      <div></div>
     </div>
   );
 };

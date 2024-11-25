@@ -7,7 +7,7 @@ const CourseDesc = () => {
   return (
     <div className=" text-white min-h-screen relative  ">
       
-      <div className=" py-8 bg-[#181615] container space-y-9">
+      <div className=" py-8 bg-gradient-to-b from-black to-gray-900 container space-y-9">
       {/* <nav className=" py-4 text-gray-400">
         <p>Home &gt; Courses &gt; Data Structures & Algorithms BootCamp @Supreme-3.0</p>
       </nav> */}

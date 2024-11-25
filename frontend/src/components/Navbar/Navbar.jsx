@@ -15,7 +15,7 @@ const Navbar = ({ isOpen, handleSubMenu }) => {
         initial={{ y: -50 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5, delay: 0.1 }}
-        className="fixed top-0 left-0 right-0 z-50 shadow-md backdrop-blur-lg bg-opacity-80"
+        className="container fixed top-0 left-0 right-0 z-40 shadow-md backdrop-blur-lg bg-opacity-80"
       >
         <div className="container mx-auto flex items-center justify-between px-4 py-3 lg:grid lg:grid-cols-3 bg-transparent">
           {/* Logo Section */}
@@ -28,7 +28,7 @@ const Navbar = ({ isOpen, handleSubMenu }) => {
           </div>
 
           {/* Menu Section */}
-          <div className="hidden lg:block">
+          <div className="hidden lg:block z-50">
             <ul className="flex items-center justify-center gap-4 bg-black/70 rounded-full py-2 px-8 shadow-sm">
               {NavbarMenu.map((item) => (
                 <li key={item.id}>

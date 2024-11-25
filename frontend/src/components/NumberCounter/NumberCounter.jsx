@@ -23,7 +23,7 @@ const NumberCounter = () => {
           <p className='text-3xl font-[700]'>
             <CountUp start = {0} end={150} duration={3} suffix='+'enableScrollSpy={true} scrollSpyOnce={true} />
           </p>
-          <p>Students Placed</p>
+          <p className='whitespace-nowrap'>Students Placed</p>
         </MagicCard>
 
         <MagicCard className='numbers' gradientColor='rgb(123, 143, 217)' gradientSize={200} gradientOpacity={0.5}>

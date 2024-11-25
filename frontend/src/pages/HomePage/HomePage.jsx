@@ -13,7 +13,7 @@ const HomePage = () => {
      
         <Hero />
 
-        <div className='relative w-full overflow-x-hidden overflow-y-hidden'>
+        <div className='relative w-full -mt-[6rem] overflow-x-hidden overflow-y-hidden'>
 
         <Ripple className = "top-20 md:block hidden " mainCircleSize={600}
         mainCircleOpacity={0.3}
