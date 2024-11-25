@@ -12,9 +12,9 @@ const Navbar = ({ isOpen, handleSubMenu }) => {
   return (
     <>
       <motion.nav
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.5 }}
+        initial={{ y: -50 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.5, delay: 0.1 }}
         className="fixed top-0 left-0 right-0 z-50 shadow-md backdrop-blur-lg bg-opacity-80"
       >
         <div className="container mx-auto flex items-center justify-between px-4 py-3 lg:grid lg:grid-cols-3 bg-transparent">
