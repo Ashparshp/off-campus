@@ -1,65 +1,71 @@
-import React, { useState } from 'react'
-import { NavbarMenu } from '../../mock_data/data';
-import {MdMenu} from 'react-icons/md'
-import {motion} from 'framer-motion';
-import Hamburger from './Hamburger';
-import LoginButton from '../LoginButton/LoginButton';
+import React from "react";
+import { NavbarMenu } from "../../mock_data/data";
+import { MdMenu } from "react-icons/md";
+import { motion } from "framer-motion";
+import Hamburger from "./Hamburger";
+import LoginButton from "../LoginButton/LoginButton";
+import { useLocation } from "react-router-dom";
 
+const Navbar = ({ isOpen, handleSubMenu }) => {
+  const location = useLocation();
 
-const Navbar = ({isOpen,handleSubMenu}) => {
-  
   return (
     <>
-      <motion.nav 
-      initial={{opacity:0}}
-      animate={{opacity:1}}
-      transition={{duration:0.5,delay:0.5}}
-      className='fixed top-0 left-0 right-0 z-50  shadow-md'
+      <motion.nav
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        className="fixed top-0 left-0 right-0 z-50 shadow-md backdrop-blur-lg bg-opacity-80"
       >
-        <div className='container  flex lg:grid lg:grid-cols-3 justify-between items-center py-2  bg-clip-padding backdrop-blur-lg bg-opacity-80'>
+        <div className="container mx-auto flex items-center justify-between px-4 py-3 lg:grid lg:grid-cols-3 bg-transparent">
           {/* Logo Section */}
-          <div className= "text-2xl flex items-center gap-2 font-bold text-primary">
-            <img src="/logo.png" alt=""  className='lg:w-[120px] w-[100px]'/>
-          {/* <p className=''>OFF CAMPUS</p> */}
+          <div className="flex items-center gap-2 text-2xl font-bold text-primary">
+            <img
+              src="/logo.png"
+              alt="Logo"
+              className="w-[100px] lg:w-[120px]"
+            />
           </div>
 
           {/* Menu Section */}
-          <div className='hidden lg:block '>
-            <ul className='flex w-fit  inset-x-0 mx-auto border border-transparent dark:border-white/[0.2] rounded-full bg-black  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]  pr-2 pl-8 py-2  items-center justify-center space-x-4'>  
-              {
-                NavbarMenu.map((item) => {
-                  return  (
-                    <a href={item.url} key={item.id} className='inline-block text-zinc-200 text-sm xl:text-base py-1 px-2 xl:px-3 hover:text-tertiary-100 transition-all duration-300 font-semibold'>
-                  <li >
+          <div className="hidden lg:block">
+            <ul className="flex items-center justify-center gap-4 bg-black/70 rounded-full py-2 px-8 shadow-sm">
+              {NavbarMenu.map((item) => (
+                <li key={item.id}>
+                  <a
+                    href={item.url}
+                    className={`text-sm xl:text-base font-semibold text-zinc-200 px-3 py-1 hover:text-tertiary-100 transition-all duration-300 ease-in-out ${
+                      location.pathname === item.url
+                        ? "border-b-2 border-tertiary-100 px-1 pr-2"
+                        : ""
+                    }`}
+                  >
                     {item.name}
-                  </li>
                   </a>
-                  )
-                  })
-              }
+                </li>
+              ))}
             </ul>
-
           </div>
 
           {/* CTA Section */}
-          <div className='hidden lg:flex lg:justify-end '>
-          <LoginButton/>
-         
+          <div className="hidden lg:flex justify-end">
+            <LoginButton />
           </div>
-          
+
           {/* Mobile Hamburger Menu */}
-          <div className='lg:hidden text-primary' onClick={handleSubMenu}>
-            <MdMenu className='text-4xl '/>
-            
+          <div
+            className="lg:hidden flex items-center text-primary cursor-pointer"
+            onClick={handleSubMenu}
+          >
+            <MdMenu className="text-4xl" />
           </div>
         </div>
-
       </motion.nav>
 
-      {/* Mobile SideBar section */}
-      <Hamburger isOpen={isOpen} handleSubMenu={handleSubMenu}/>
+      {/* Mobile Sidebar Section */}
+      <Hamburger isOpen={isOpen} handleSubMenu={handleSubMenu} />
     </>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
