@@ -12,7 +12,7 @@ const Hero = () => {
       <div className="text-center space-y-6 px-6 md:mt-0 -mt-20">
         {/* Hero Text */}
         <motion.h1
-          className="text-6xl sm:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent animate-pulse whitespace-nowrap"
+          className="text-5xl sm:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent animate-pulse "
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
